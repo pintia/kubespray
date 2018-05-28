@@ -256,6 +256,7 @@
       networking
       {%- endif %}
     state: restarted
+  ignore_errors: True
   when:
     - ansible_os_family not in ["CoreOS", "Container Linux by CoreOS"]
     - reset_restart_network
