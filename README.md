@@ -1,5 +1,16 @@
 ![Kubernetes Logo](https://s28.postimg.org/lf3q4ocpp/k8s.png)
 
+Patest customized Kubespray
+==========================
+
+Our inventory file is in ``inventory/judger-kube``
+
+- Change all GFW blocked image to local mirrors
+- Change docker-ce repo to tuna.tsinghua mirror
+- Add some yaml in ``deployments``
+- Add judger autoscaler
+
+
 Deploy a Production Ready Kubernetes Cluster
 ============================================
 
