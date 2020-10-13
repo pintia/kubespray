@@ -117,7 +117,7 @@ kube_encrypt_secret_data: false
 
 # DNS configuration.
 # Kubernetes cluster name, also will be used as DNS domain
-cluster_name: cluster.local
+cluster_name: kube.dev-patest
 # Subdomains of DNS domain to be resolved via /etc/resolv.conf for hostnet pods
 ndots: 2
 # Can be dnsmasq_kubedns, kubedns, coredns, coredns_dual, manual or none
@@ -194,16 +194,16 @@ cephfs_provisioner_enabled: false
 # cephfs_provisioner_storage_class: cephfs
 
 # Nginx ingress controller deployment
-ingress_nginx_enabled: false
-# ingress_nginx_host_network: false
-# ingress_nginx_namespace: "ingress-nginx"
-# ingress_nginx_insecure_port: 80
-# ingress_nginx_secure_port: 443
-# ingress_nginx_configmap:
-#   map-hash-bucket-size: "128"
-#   ssl-protocols: "SSLv2"
-# ingress_nginx_configmap_tcp_services:
-#   9000: "default/example-go:8080"
+ingress_nginx_enabled: true
+ingress_nginx_host_network: true
+ingress_nginx_namespace: "ingress-nginx"
+ingress_nginx_insecure_port: 80
+ingress_nginx_secure_port: 443
+ingress_nginx_configmap:
+  map-hash-bucket-size: "128"
+  ssl-protocols: "SSLv2"
+ingress_nginx_configmap_tcp_services:
+  9000: "default/example-go:8080"
 # ingress_nginx_configmap_udp_services:
 #   53: "kube-system/kube-dns:53"
 
